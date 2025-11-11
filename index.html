@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Outstrix - Minimalist Streetwear</title>
   <link rel="icon" href="/pages/images/icon.jpg">
-  
-  <meta name="description" content="Outstrix - Pakistan’s bold minimalist t-shirt brand for streetwear lovers. Discover oversized printed tees designed for expression." />
-  <meta name="keywords" content="Outstrix, t-shirts, streetwear, minimalist tees, oversized shirts, Pakistan clothing brand" />
+
+  <meta name="description"
+    content="Outstrix - Pakistan’s bold minimalist t-shirt brand for streetwear lovers. Discover oversized printed tees designed for expression." />
+  <meta name="keywords"
+    content="Outstrix, t-shirts, streetwear, minimalist tees, oversized shirts, Pakistan clothing brand" />
   <meta name="author" content="Ahmed Raza" />
   <meta name="robots" content="index, follow" />
 
@@ -17,16 +20,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
   <style>
-    
     body {
-      background-color:black;
+      background-color: black;
       color: white;
       font-family: 'Inter', sans-serif;
     }
-    input:focus{
+
+    input:focus {
       outline: none;
       box-shadow: none;
     }
+
     .product-card img {
       height: 300px;
       object-fit: cover;
@@ -47,27 +51,32 @@
       background-color: #111;
       z-index: 1000;
       padding: 20px;
-      box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
       overflow-y: auto;
     }
+
     /* Optional smooth fade */
     #loader {
       transition: opacity 0.5s ease;
     }
+
     #search-form {
       flex-wrap: nowrap !important;
     }
+
     #search-input {
       min-width: 0;
       max-width: 70%;
     }
-    #scrollToTopBtn{
+
+    #scrollToTopBtn {
       position: fixed;
       bottom: 20px;
       right: 20px;
       z-index: 1000;
       display: none;
     }
+
     @media (max-width: 576px) {
       #cart-sidebar {
         width: 100%;
@@ -75,48 +84,50 @@
     }
   </style>
 </head>
+
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark mt-3">
-  <div class="container d-flex justify-content-between align-items-center">
-    <a class="navbar-brand" href="#">Out<span class="text-success">strix</span></a>
-    <a href="#" id="cart-toggle" class="btn btn-outline-success position-relative">
-      <i class="fas fa-shopping-cart"></i>
-      <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-dark">
-        0
-      </span>
-    </a>
-  </div>
-</nav>
-
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="#">Out<span class="text-success">strix</span></a>
+      <a href="#" id="cart-toggle" class="btn btn-outline-success position-relative">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count"
+          class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-dark">
+          0
+        </span>
+      </a>
+    </div>
+  </nav>
   <!-- Cart Sidebar -->
   <div id="cart-sidebar">
     <div class="d-flex justify-content-between align-items-center mb-3">
       <h4 class="text-success fw-bold">Your Cart</h4>
       <button id="close-cart" class="btn btn-sm btn-danger">&times;</button>
     </div>
-    
+
     <div id="cart-items"></div>
-    
-    <hr/>
-    
+
+    <hr />
+
     <div class="d-flex justify-content-between text-success">
       <strong>Total:</strong>
       <span>Rs. <span id="cart-total">0</span></span>
     </div>
-    
-    <a href="#" id="whatsapp-checkout" target="_blank" class="btn btn-success w-100 mt-3 disabled" tabindex="-1" aria-disabled="true">
+
+    <a href="#" id="whatsapp-checkout" target="_blank" class="btn btn-success w-100 mt-3 disabled" tabindex="-1"
+      aria-disabled="true">
       Checkout on WhatsApp
     </a>
   </div>
 
-  
+
   <!-- Heo Section -->
   <section class="container py-5 text-center">
-    <h1 class="text-success">Outstrix  Minimalist Streetwear</h1>
+    <h1 class="text-success">Outstrix Minimalist Streetwear</h1>
     <p>Discover our latest collection crafted for comfort and style — perfect for your everyday bold expression.</p>
     <form id="search-form" class="d-flex justify-content-center align-items-center mt-4">
-      <input id="search-input" class="form-control w-auto" type="search" placeholder="Search" aria-label="Search" >
+      <input id="search-input" class="form-control w-auto" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success ml-3" type="submit">Search</button>
     </form>
   </section>
@@ -132,7 +143,8 @@
   <footer class="py-4 border-top text-center text-muted">
     <div class="container">
       <small>&copy; 2025 Outstrix | Built by Ahmed Raza</small><br>
-      <a href="https://www.linkedin.com/in/ahmedraza-frontend/" target="_blank" class="text-success mx-2 text-decoration-none">
+      <a href="https://www.linkedin.com/in/ahmedraza-frontend/" target="_blank"
+        class="text-success mx-2 text-decoration-none">
         <i class="bi bi-linkedin"></i>
       </a>
       <a href="https://github.com/Ahmedrazakhan11110" target="_blank" class="text-success mx-2 text-decoration-none">
@@ -144,31 +156,32 @@
         <i class="fas fa-arrow-up mlau"></i>
       </button>
     </div>
+    <img src="pages/" alt="">
   </footer>
-<!-- Js and jQuery  -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(function() {
-  
-  $('body').css('opacity', '0').delay(500).queue(function(next){
-    $(this).css('transition', 'opacity 1s ease-out').css('opacity', '1');
-    next();
-  });
+  <!-- Js and jQuery  -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function () {
 
-  const products = [
-    { id: 1, title: 'Outstrix Minimal - Grey Drop', price: 1500, img:'pages/images/product-1.jpg'},
-    { id: 2, title: 'Signature Oversized Tee - White', price: 1750, img:'pages/images/product-2.jpg'},
-    { id: 3, title: 'Oversized T-Shirt - Black Edition', price: 1600, img:'pages/images/product-3.jpg'},
-    { id: 4, title: 'Graphic Black Tee', price: 1500, img:'pages/images/product-4.jpg'},
-    { id: 5, title: 'Bold Lettered Shirt', price: 1750, img:'pages/images/product-5.jpg'},
-    { id: 6, title: 'Limited Edition Tee', price: 1600, img:'pages/images/product-6.jpg'}
-  ];
+      $('body').css('opacity', '0').delay(500).queue(function (next) {
+        $(this).css('transition', 'opacity 1s ease-out').css('opacity', '1');
+        next();
+      });
 
-  function renderProducts(filter = '') {
-    const container = $('#product-list').empty();
-    const filtered = products.filter(p => p.title.toLowerCase().includes(filter.toLowerCase()));
-    $.each(filtered, function(_, product) {
-      const card = `
+      const products = [
+        { id: 1, title: 'Outstrix Minimal - Grey Drop', price: 1500, img: 'pages/images/product-6.jpg' },
+        { id: 2, title: 'Signature Oversized Tee - White', price: 1750, img: 'pages/images/product-1.jpg' },
+        { id: 3, title: 'Oversized T-Shirt - Black Edition', price: 1600, img: 'pages/images/product-2.jpg' },
+        { id: 4, title: 'Graphic Black Tee', price: 1500, img: 'pages/images/product-3.jpg' },
+        { id: 5, title: 'Bold Lettered Shirt', price: 1750, img: 'pages/images/product-4.jpg' },
+        { id: 6, title: 'Limited Edition Tee', price: 1600, img: 'pages/images/product-5.jpg' }
+      ];
+
+      function renderProducts(filter = '') {
+        const container = $('#product-list').empty();
+        const filtered = products.filter(p => p.title.toLowerCase().includes(filter.toLowerCase()));
+        $.each(filtered, function (_, product) {
+          const card = `
         <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
           <div class="card product-card text-white border-0">
             <img src="${product.img}" class="card-img-top" alt="${product.title}">
@@ -181,40 +194,40 @@ $(function() {
             </div>
           </div>
         </div>`;
-      container.append(card);
-    });
-  }
+          container.append(card);
+        });
+      }
 
-  function updateWhatsAppLink() {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const waLinkElem = $('#whatsapp-checkout');
-    if (!cart.length) {
-      waLinkElem.attr('href', '#').addClass('disabled');
-      return;
-    }
-    let message = 'Hi, I want to order these products:%0A';
-    $.each(cart, function(i, item) {
-      message += `${i + 1}. ${item.title} - Rs. ${item.price}%0A`;
-    });
-    const total = cart.reduce((sum, item) => sum + item.price, 0);
-    message += `Total: Rs. ${total}`;
-    const waNumber = '923347127234';
-    const waLink = `https://wa.me/${waNumber}?text=${message}`;
-    waLinkElem.attr('href', waLink).removeClass('disabled');
-  }
+      function updateWhatsAppLink() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const waLinkElem = $('#whatsapp-checkout');
+        if (!cart.length) {
+          waLinkElem.attr('href', '#').addClass('disabled');
+          return;
+        }
+        let message = 'Hi, I want to order these products:%0A';
+        $.each(cart, function (i, item) {
+          message += `${i + 1}. ${item.title} - Rs. ${item.price}%0A`;
+        });
+        const total = cart.reduce((sum, item) => sum + item.price, 0);
+        message += `Total: Rs. ${total}`;
+        const waNumber = '923347127234';
+        const waLink = `https://wa.me/${waNumber}?text=${message}`;
+        waLinkElem.attr('href', waLink).removeClass('disabled');
+      }
 
-  function updateCartUI() {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    $('#cart-count').text(cart.length);
-    const cartItems = $('#cart-items').empty();
+      function updateCartUI() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        $('#cart-count').text(cart.length);
+        const cartItems = $('#cart-items').empty();
 
-    if (!cart.length) {
-      cartItems.append('<p class="text-center text-muted">Your cart is empty.</p>');
-    } else {
-      let total = 0;
-      $.each(cart, function(index, item) {
-        total += item.price;
-        cartItems.append(`
+        if (!cart.length) {
+          cartItems.append('<p class="text-center text-muted">Your cart is empty.</p>');
+        } else {
+          let total = 0;
+          $.each(cart, function (index, item) {
+            total += item.price;
+            cartItems.append(`
           <div class="d-flex justify-content-between align-items-center mb-3 border-bottom pb-2">
             <div>
               <h6 class="text-success mb-1">${item.title}</h6>
@@ -222,69 +235,70 @@ $(function() {
             </div>
             <button class="btn btn-sm btn-danger remove-item" data-index="${index}">Remove</button>
           </div>`);
-      });
-      $('#cart-total').text(total);
-    }
-    updateWhatsAppLink();
-  }
+          });
+          $('#cart-total').text(total);
+        }
+        updateWhatsAppLink();
+      }
 
-  function addToLocalStorage(product) {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.push(product);
-    localStorage.setItem('cart', JSON.stringify(cart));
-  }
+      function addToLocalStorage(product) {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push(product);
+        localStorage.setItem('cart', JSON.stringify(cart));
+      }
 
-  renderProducts();
-  updateCartUI();
-
-  $(document).on('click', '.add-to-cart', function() {
-    const id = $(this).data('id');
-    const product = products.find(p => p.id === id);
-    if (product) {
-      addToLocalStorage(product);
+      renderProducts();
       updateCartUI();
-    }
-  });
 
-  $(document).on('click', '.remove-item', function() {
-    const index = $(this).data('index');
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.splice(index, 1);
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartUI();
-  });
+      $(document).on('click', '.add-to-cart', function () {
+        const id = $(this).data('id');
+        const product = products.find(p => p.id === id);
+        if (product) {
+          addToLocalStorage(product);
+          updateCartUI();
+        }
+      });
 
-  $('#search-input').on('input', function() {
-    renderProducts($(this).val());
-  });
+      $(document).on('click', '.remove-item', function () {
+        const index = $(this).data('index');
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartUI();
+      });
 
-  $('#search-form').on('submit', function(e) {
-    e.preventDefault();
-  });
+      $('#search-input').on('input', function () {
+        renderProducts($(this).val());
+      });
 
-  $('#cart-toggle').on('click', function(e) {
-    e.preventDefault();
-    $('#cart-sidebar').fadeIn();
-  });
+      $('#search-form').on('submit', function (e) {
+        e.preventDefault();
+      });
 
-  $('#close-cart').on('click', function() {
-    $('#cart-sidebar').fadeOut();
-  });
+      $('#cart-toggle').on('click', function (e) {
+        e.preventDefault();
+        $('#cart-sidebar').fadeIn();
+      });
 
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 200) {
-      $('#scrollToTopBtn').fadeIn();
-    } else {
-      $('#scrollToTopBtn').fadeOut();
-    }
-  });
+      $('#close-cart').on('click', function () {
+        $('#cart-sidebar').fadeOut();
+      });
 
-  $('#scrollToTopBtn').click(function() {
-    $('html, body').animate({ scrollTop: 0 }, 800);
-    return false;
-  });
-});
-</script>
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+          $('#scrollToTopBtn').fadeIn();
+        } else {
+          $('#scrollToTopBtn').fadeOut();
+        }
+      });
+
+      $('#scrollToTopBtn').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 800);
+        return false;
+      });
+    });
+  </script>
 
 </body>
+
 </html>
